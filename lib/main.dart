@@ -1,4 +1,4 @@
-import 'package:car_rental_modern/view/detail_screen/detail_screen.dart';
+import 'package:car_rental_modern/view/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -14,10 +14,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) {
-        return const GetMaterialApp(
+        return GetMaterialApp(
+          theme: ThemeData(
+            bottomSheetTheme: const BottomSheetThemeData(
+              backgroundColor: Colors.transparent,
+            ),
+          ),
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
-          home: DetailScreen(),
+          home: const HomeScreen(),
         );
       },
     );

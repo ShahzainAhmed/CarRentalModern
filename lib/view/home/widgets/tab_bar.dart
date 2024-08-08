@@ -1,20 +1,40 @@
 import 'package:car_rental_modern/resources/app_colors.dart';
+import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TabBarWidget extends StatelessWidget {
-  const TabBarWidget({super.key});
+  final String title;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  const TabBarWidget({
+    super.key,
+    required this.title,
+    required this.isSelected,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10.w),
-      decoration: BoxDecoration(
-        color: AppColors.kWhiteColor,
-        borderRadius: BorderRadius.circular(6.r),
-        border: Border.all(color: AppColors.kBlackColor.withOpacity(0.2)),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        decoration: BoxDecoration(
+          color: isSelected ? AppColors.kBlackColor : AppColors.kWhiteColor,
+          borderRadius: BorderRadius.circular(10.r),
+          border: Border.all(color: AppColors.kBlackColor.withOpacity(0.2)),
+        ),
+        child: Center(
+            child: Text(
+          title,
+          style: AppTypography.kMedium12.copyWith(
+            color: isSelected ? AppColors.kWhiteColor : AppColors.kBlackColor,
+          ),
+        )),
       ),
-      child: const Text("Brand"),
     );
   }
 }

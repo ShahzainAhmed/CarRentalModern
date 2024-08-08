@@ -16,7 +16,7 @@ class AppTypography {
 
   static TextStyle kExtraLight28 =
       GoogleFonts.poppins(fontSize: 28.sp, fontWeight: FontWeight.w300);
-      
+
   // Light
 
   static TextStyle kLight6 =
@@ -61,6 +61,9 @@ class AppTypography {
 
   static TextStyle kMedium22 =
       GoogleFonts.poppins(fontSize: 22.sp, fontWeight: FontWeight.w500);
+      
+  static TextStyle kMedium24 =
+      GoogleFonts.poppins(fontSize: 24.sp, fontWeight: FontWeight.w500);
 
   static TextStyle kMedium26 =
       GoogleFonts.poppins(fontSize: 26.sp, fontWeight: FontWeight.w500);

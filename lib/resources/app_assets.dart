@@ -1,6 +1,5 @@
 class AppAssets {
-  static const splash = 'assets/splash.png';
-  static const picture1 = 'assets/picture1.jpg';
-  static const picture2 = 'assets/picture2.PNG';
-  static const picture3 = 'assets/picture3.png';
+  static const car1 = 'assets/images/car1.jpg';
+  static const car2 = 'assets/images/car2.jpg';
+  static const car3 = 'assets/images/car3.jpg';
 }

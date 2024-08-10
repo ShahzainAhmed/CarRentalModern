@@ -1,5 +1,4 @@
 import 'package:car_rental_modern/models/large_tiles_model.dart';
-import 'package:car_rental_modern/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -27,8 +26,11 @@ class LargeTiles extends StatelessWidget {
               width: Get.width,
               height: 200.h,
               decoration: BoxDecoration(
-                color: AppColors.kBlackColor,
                 borderRadius: BorderRadius.circular(20.r),
+                image: DecorationImage(
+                  image: AssetImage(largeTilesModel.image),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(height: 10.h),

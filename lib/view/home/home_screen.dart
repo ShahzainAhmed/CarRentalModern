@@ -35,9 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
               width: Get.width,
               height: Get.height * 0.84,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(20.r),
-                ),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(20.r)),
                 color: AppColors.kWhiteColor,
               ),
               child: SingleChildScrollView(
@@ -80,7 +78,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (context, index) {
                           return SmallTiles(
                             smallTilesModel: smallTilesList[index],
-                            onTap: () => Get.to(const DetailScreen()),
+                            onTap: () => Get.to(
+                              DetailScreen(
+                                largeTilesModel: largeTilesList[index],
+                              ),
+                            ),
                           );
                         },
                       ),
@@ -112,8 +114,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemBuilder: (context, index) {
                         return LargeTiles(
                           largeTilesModel: largeTilesList[index],
-                          onTap: () => Get.to(DetailScreen()),
-                          
+                          onTap: () => Get.to(
+                            DetailScreen(
+                              largeTilesModel: largeTilesList[index],
+                            ),
+                          ),
                         );
                       },
                     ),

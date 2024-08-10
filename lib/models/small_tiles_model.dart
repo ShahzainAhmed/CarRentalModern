@@ -1,3 +1,5 @@
+import 'package:car_rental_modern/resources/app_assets.dart';
+
 class SmallTilesModel {
   final String title;
   final String image;
@@ -11,18 +13,18 @@ class SmallTilesModel {
 List smallTilesList = [
   SmallTilesModel(
     title: "Sports",
-    image: "",
+    image: AppAssets.car2,
   ),
   SmallTilesModel(
     title: "Electric",
-    image: "",
+    image: AppAssets.car3,
   ),
   SmallTilesModel(
     title: "Legends",
-    image: "",
+    image: AppAssets.car1,
   ),
   SmallTilesModel(
     title: "Classic",
-    image: "",
+    image: AppAssets.car1,
   ),
 ];

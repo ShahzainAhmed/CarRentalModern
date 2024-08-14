@@ -1,3 +1,4 @@
+import 'package:car_rental_modern/resources/app_assets.dart';
 import 'package:car_rental_modern/resources/app_colors.dart';
 import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,7 @@ class ReviewsContainerWidget extends StatelessWidget {
       height: 80.h,
       decoration: BoxDecoration(
         color: AppColors.kGreyColor,
+        border: Border.all(color: AppColors.kBlackColor.withOpacity(0.09)),
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: Column(
@@ -29,6 +31,7 @@ class ReviewsContainerWidget extends StatelessWidget {
             contentPadding: EdgeInsets.zero,
             leading: const CircleAvatar(
               backgroundColor: AppColors.kBlackColor,
+              backgroundImage: AssetImage(AppAssets.logo),
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

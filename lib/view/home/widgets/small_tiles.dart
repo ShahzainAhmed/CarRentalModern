@@ -25,7 +25,7 @@ class SmallTiles extends StatelessWidget {
             width: 120.w,
             decoration: BoxDecoration(
               color: AppColors.kBlackColor,
-              borderRadius: BorderRadius.circular(20.r),
+              borderRadius: BorderRadius.circular(15.r),
               image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage(

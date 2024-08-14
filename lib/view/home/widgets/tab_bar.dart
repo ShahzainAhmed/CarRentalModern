@@ -3,6 +3,7 @@ import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TabBarWidget extends StatelessWidget {
   final String title;
@@ -28,12 +29,15 @@ class TabBarWidget extends StatelessWidget {
           border: Border.all(color: AppColors.kBlackColor.withOpacity(0.2)),
         ),
         child: Center(
-            child: Text(
-          title,
-          style: AppTypography.kMedium12.copyWith(
-            color: isSelected ? AppColors.kWhiteColor : AppColors.kBlackColor,
+          child: Text(
+            title,
+            style: GoogleFonts.poppins(
+              fontSize: 12.sp,
+              fontWeight: FontWeight.w500,
+              color: isSelected ? AppColors.kWhiteColor : AppColors.kBlackColor,
+            ),
           ),
-        )),
+        ),
       ),
     );
   }

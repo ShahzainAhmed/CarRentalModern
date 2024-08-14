@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:car_rental_modern/models/categories_model.dart';
 import 'package:car_rental_modern/models/large_tiles_model.dart';
 import 'package:car_rental_modern/models/small_tiles_model.dart';
@@ -30,99 +31,114 @@ class _HomeScreenState extends State<HomeScreen> {
           const LocationContainer(),
           Align(
             alignment: Alignment.bottomCenter,
-            child: Container(
-              padding: EdgeInsets.only(top: 20.h),
-              width: Get.width,
-              height: Get.height * 0.84,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.vertical(top: Radius.circular(20.r)),
-                color: AppColors.kWhiteColor,
-              ),
-              child: SingleChildScrollView(
-                physics: const ClampingScrollPhysics(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 30.h,
-                      child: ListView.separated(
-                        padding: EdgeInsets.symmetric(horizontal: 20.w),
-                        separatorBuilder: (context, index) =>
-                            SizedBox(width: 10.w),
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: categoriesList.length,
-                        itemBuilder: (context, index) {
-                          return TabBarWidget(
-                            isSelected: selectedIndex == index,
-                            title: categoriesList[index],
-                            onTap: () {
-                              setState(() {
-                                selectedIndex = index;
-                              });
-                            },
-                          );
-                        },
+            child: FadeInUp(
+              duration: const Duration(milliseconds: 1000),
+              child: Container(
+                padding: EdgeInsets.only(top: 20.h),
+                width: Get.width,
+                height: Get.height * 0.84,
+                decoration: BoxDecoration(
+                  borderRadius:
+                      BorderRadius.vertical(top: Radius.circular(20.r)),
+                  color: AppColors.kWhiteColor,
+                ),
+                child: SingleChildScrollView(
+                  physics: const ClampingScrollPhysics(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 30.h,
+                        child: ListView.separated(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          separatorBuilder: (context, index) =>
+                              SizedBox(width: 10.w),
+                          scrollDirection: Axis.horizontal,
+                          physics: const BouncingScrollPhysics(),
+                          itemCount: categoriesList.length,
+                          itemBuilder: (context, index) {
+                            return FadeInRight(
+                              duration: const Duration(milliseconds: 1400),
+                              child: TabBarWidget(
+                                isSelected: selectedIndex == index,
+                                title: categoriesList[index],
+                                onTap: () {
+                                  setState(() {
+                                    selectedIndex = index;
+                                  });
+                                },
+                              ),
+                            );
+                          },
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20.h),
-                    SizedBox(
-                      height: 170.h,
-                      child: ListView.separated(
-                        padding: EdgeInsets.symmetric(horizontal: 20.w),
-                        scrollDirection: Axis.horizontal,
+                      SizedBox(height: 20.h),
+                      SizedBox(
+                        height: 170.h,
+                        child: ListView.separated(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          scrollDirection: Axis.horizontal,
+                          separatorBuilder: (context, index) =>
+                              SizedBox(width: 10.w),
+                          physics: const BouncingScrollPhysics(),
+                          itemCount: smallTilesList.length,
+                          itemBuilder: (context, index) {
+                            return FadeInRight(
+                              duration: const Duration(milliseconds: 1500),
+                              child: SmallTiles(
+                                smallTilesModel: smallTilesList[index],
+                                onTap: () {},
+                              ),
+                            );
+                          },
+                        ),
+                      ),
+                      SizedBox(height: 26.h),
+                      FadeInUp(
+                        duration: const Duration(milliseconds: 1600),
+                        child: Divider(
+                          color: AppColors.kBlackColor.withOpacity(0.1),
+                          height: 0.1,
+                        ),
+                      ),
+                      SizedBox(height: 26.h),
+                      FadeInUp(
+                        duration: const Duration(milliseconds: 1700),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.w),
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("105 available"),
+                              Text("Popular"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      ListView.separated(
+                        physics: const ClampingScrollPhysics(),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 20.w, vertical: 20.h),
                         separatorBuilder: (context, index) =>
-                            SizedBox(width: 10.w),
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: smallTilesList.length,
+                            SizedBox(height: 10.h),
+                        shrinkWrap: true,
+                        itemCount: largeTilesList.length,
                         itemBuilder: (context, index) {
-                          return SmallTiles(
-                            smallTilesModel: smallTilesList[index],
-                            onTap: () => Get.to(
-                              DetailScreen(
-                                largeTilesModel: largeTilesList[index],
+                          return FadeInUp(
+                            duration: const Duration(milliseconds: 1700),
+                            child: LargeTiles(
+                              largeTilesModel: largeTilesList[index],
+                              onTap: () => Get.to(
+                                DetailScreen(
+                                  largeTilesModel: largeTilesList[index],
+                                ),
                               ),
                             ),
                           );
                         },
                       ),
-                    ),
-                    SizedBox(height: 26.h),
-                    Divider(
-                      color: AppColors.kBlackColor.withOpacity(0.1),
-                      height: 0.1,
-                    ),
-                    SizedBox(height: 26.h),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20.w),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text("105 available"),
-                          Text("Popular"),
-                        ],
-                      ),
-                    ),
-                    ListView.separated(
-                      physics: const ClampingScrollPhysics(),
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 20.w, vertical: 20.h),
-                      separatorBuilder: (context, index) =>
-                          SizedBox(height: 10.h),
-                      shrinkWrap: true,
-                      itemCount: largeTilesList.length,
-                      itemBuilder: (context, index) {
-                        return LargeTiles(
-                          largeTilesModel: largeTilesList[index],
-                          onTap: () => Get.to(
-                            DetailScreen(
-                              largeTilesModel: largeTilesList[index],
-                            ),
-                          ),
-                        );
-                      },
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -1,8 +1,10 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:car_rental_modern/resources/app_colors.dart';
 import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LocationContainer extends StatelessWidget {
   const LocationContainer({super.key});
@@ -25,10 +27,16 @@ class LocationContainer extends StatelessWidget {
                   color: AppColors.kWhiteColor,
                 ),
                 SizedBox(width: 10.w),
-                Text(
-                  "Los Angeles, California, U.S.",
-                  style: AppTypography.kMedium12
-                      .copyWith(color: AppColors.kWhiteColor),
+                FadeInRight(
+                  duration: const Duration(milliseconds: 1200),
+                  child: Text(
+                    "Los Angeles, California, U.S.",
+                    style: GoogleFonts.poppins(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.kWhiteColor,
+                    ),
+                  ),
                 )
               ],
             ),
@@ -41,10 +49,16 @@ class LocationContainer extends StatelessWidget {
                   color: AppColors.kWhiteColor,
                 ),
                 SizedBox(width: 10.w),
-                Text(
-                  "Sep 1, 10:00 AM - Sep 3 , 10:00 AM",
-                  style: AppTypography.kMedium12
-                      .copyWith(color: AppColors.kWhiteColor),
+                FadeInRight(
+                  duration: const Duration(milliseconds: 1400),
+                  child: Text(
+                    "Sep 1, 10:00 AM - Sep 3 , 10:00 AM",
+                    style: GoogleFonts.poppins(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.kWhiteColor,
+                    ),
+                  ),
                 )
               ],
             )

@@ -22,14 +22,17 @@ class LargeTiles extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: Get.width,
-              height: 200.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20.r),
-                image: DecorationImage(
-                  image: AssetImage(largeTilesModel.image),
-                  fit: BoxFit.cover,
+            Hero(
+              tag: largeTilesModel.image,
+              child: Container(
+                width: Get.width,
+                height: 200.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.r),
+                  image: DecorationImage(
+                    image: AssetImage(largeTilesModel.image),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

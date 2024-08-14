@@ -25,6 +25,6 @@ List smallTilesList = [
   ),
   SmallTilesModel(
     title: "Classic",
-    image: AppAssets.car1,
+    image: AppAssets.car8,
   ),
 ];

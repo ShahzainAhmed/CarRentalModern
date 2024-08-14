@@ -1,3 +1,4 @@
+import 'package:car_rental_modern/models/car_specs_model.dart';
 import 'package:car_rental_modern/resources/app_assets.dart';
 
 class LargeTilesModel {
@@ -7,7 +8,7 @@ class LargeTilesModel {
   final String fullRating;
   final String rating;
   final String reviews;
-  // final String specsHeading;
+  List<CarSpecsModel> myCarSpecsList;
 
   LargeTilesModel({
     required this.title,
@@ -16,63 +17,48 @@ class LargeTilesModel {
     required this.fullRating,
     required this.rating,
     required this.reviews,
-    // required this.specsHeading,
+    required this.myCarSpecsList,
   });
 }
 
 List largeTilesList = [
   LargeTilesModel(
-    title: "Audi R8 Performance",
-    image: AppAssets.car1,
-    price: "800",
-    fullRating: "92",
-    rating: "5.0",
-    reviews: "14",
-  ),
-  LargeTilesModel(
-    title: "BMW M4 Coupe",
-    image: AppAssets.car2,
-    price: "750",
-    fullRating: "95",
-    rating: "4.6",
-    reviews: "12",
-  ),
-  LargeTilesModel(
-    title: "Mercedes AMG GT",
-    image: AppAssets.car3,
-    price: "900",
-    fullRating: "88",
-    rating: "4.9",
-    reviews: "16",
-  ),
-  LargeTilesModel(
-    title: "Porsche 911 Carrera",
-    image: AppAssets.car1,
-    price: "850",
-    fullRating: "97",
-    rating: "4.1",
-    reviews: "22",
-  ),
-  LargeTilesModel(
     title: "Lamborghini Huracan",
-    image: AppAssets.car2,
+    image: AppAssets.car7,
     price: "1000",
     fullRating: "84",
     rating: "4.8",
     reviews: "19",
+    myCarSpecsList: [
+      CarSpecsModel(title: "Engine", subTitle: "610 hp, 5.2 l"),
+      CarSpecsModel(title: "0-100 km/h", subTitle: "3.2 s"),
+      CarSpecsModel(title: "Drive", subTitle: "All-wheel"),
+    ],
   ),
   LargeTilesModel(
-    title: "Ferrari 488 Spider",
-    image: AppAssets.car3,
-    price: "1200",
-    fullRating: "76",
+    title: "Audi R8 Performance",
+    image: AppAssets.car4,
+    price: "800",
+    fullRating: "92",
     rating: "5.0",
-    reviews: "21",
+    reviews: "14",
+    myCarSpecsList: [
+      CarSpecsModel(title: "Engine", subTitle: "577 hp, 4.0 l"),
+      CarSpecsModel(title: "0-100 km/h", subTitle: "3.6 s"),
+      CarSpecsModel(title: "Drive", subTitle: "Rear-wheel"),
+    ],
   ),
-];
-
-List specList = [
-  "Engine",
-  "0-100 km/h",
-  "Drive",
+  LargeTilesModel(
+    title: "Mercedes AMG GT",
+    image: AppAssets.car6,
+    price: "900",
+    fullRating: "88",
+    rating: "4.9",
+    reviews: "16",
+    myCarSpecsList: [
+      CarSpecsModel(title: "Engine", subTitle: "661 hp, 3.9 l"),
+      CarSpecsModel(title: "0-100 km/h", subTitle: "3.0 s"),
+      CarSpecsModel(title: "Drive", subTitle: "Rear-wheel"),
+    ],
+  ),
 ];

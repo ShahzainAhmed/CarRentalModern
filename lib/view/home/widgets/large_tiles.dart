@@ -1,4 +1,5 @@
 import 'package:car_rental_modern/models/large_tiles_model.dart';
+import 'package:car_rental_modern/resources/app_colors.dart';
 import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,21 +39,45 @@ class LargeTiles extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  largeTilesModel.title,
-                  style: AppTypography.kBold.copyWith(fontSize: 16.sp),
-                ),
-                const Spacer(),
-                const Icon(Icons.star, color: Colors.amber),
-                Text(largeTilesModel.rating),
-              ],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    largeTilesModel.title,
+                    style: AppTypography.kBold.copyWith(fontSize: 16.sp),
+                  ),
+                  const Spacer(),
+                  const Icon(Icons.star, color: Colors.amber),
+                  SizedBox(width: 4.w),
+                  Text(
+                    largeTilesModel.rating,
+                    style: AppTypography.kBold12,
+                  ),
+                ],
+              ),
             ),
-            Text(
-              "\$${largeTilesModel.price} / day",
-              style: AppTypography.kBlack.copyWith(fontSize: 12.sp),
+            SizedBox(height: 4.h),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 5.w),
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text:
+                          '\$${largeTilesModel.price}', // The price part in bold
+                      style: AppTypography.kBlack.copyWith(
+                          fontSize: 12.sp, color: AppColors.kBlackColor),
+                    ),
+                    TextSpan(
+                      text: ' / day',
+                      style: AppTypography.kLight10
+                          .copyWith(color: AppColors.kBlackColor),
+                    )
+                  ],
+                ),
+              ),
             ),
           ],
         ),

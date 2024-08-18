@@ -51,7 +51,7 @@ class LocationContainer extends StatelessWidget {
                 FadeInRight(
                   duration: const Duration(milliseconds: 1400),
                   child: Text(
-                    "Sep 1, 10:00 AM - Sep 3 , 10:00 AM",
+                    "Sep 1 , 10:00 AM - Sep 3 , 10:00 AM",
                     style: GoogleFonts.poppins(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w500,

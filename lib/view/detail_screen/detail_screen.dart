@@ -25,25 +25,28 @@ class _DetailScreenState extends State<DetailScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-              padding: EdgeInsets.zero,
-              onPressed: () async {
-                Get.back();
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios_new,
-                color: AppColors.kWhiteColor,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 28),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                padding: EdgeInsets.zero,
+                onPressed: () async {
+                  Get.back();
+                },
+                icon: const Icon(
+                  Icons.arrow_back_ios_new,
+                  color: AppColors.kWhiteColor,
+                ),
               ),
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.ios_share_rounded),
-              color: AppColors.kWhiteColor,
-            )
-          ],
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.ios_share_rounded),
+                color: AppColors.kWhiteColor,
+              )
+            ],
+          ),
         ),
       ),
       body: Stack(

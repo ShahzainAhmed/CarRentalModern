@@ -33,10 +33,7 @@ class SmallTiles extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            smallTilesModel.title,
-            style: AppTypography.kBold.copyWith(fontSize: 14.sp),
-          ),
+          Text(smallTilesModel.title, style: AppTypography.kBold12),
         ],
       ),
     );

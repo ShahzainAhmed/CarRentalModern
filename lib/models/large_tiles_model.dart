@@ -30,7 +30,7 @@ List largeTilesList = [
     rating: "4.8",
     reviews: "19",
     myCarSpecsList: [
-      CarSpecsModel(title: "Engine", subTitle: "610 hp, 5.2 l"),
+      CarSpecsModel(title: "Engine", subTitle: "610 hp, 5.2 L"),
       CarSpecsModel(title: "0-100 km/h", subTitle: "3.2 s"),
       CarSpecsModel(title: "Drive", subTitle: "All-wheel"),
     ],
@@ -43,7 +43,7 @@ List largeTilesList = [
     rating: "5.0",
     reviews: "14",
     myCarSpecsList: [
-      CarSpecsModel(title: "Engine", subTitle: "577 hp, 4.0 l"),
+      CarSpecsModel(title: "Engine", subTitle: "577 hp, 4.0 L"),
       CarSpecsModel(title: "0-100 km/h", subTitle: "3.6 s"),
       CarSpecsModel(title: "Drive", subTitle: "Rear-wheel"),
     ],
@@ -56,7 +56,7 @@ List largeTilesList = [
     rating: "4.9",
     reviews: "16",
     myCarSpecsList: [
-      CarSpecsModel(title: "Engine", subTitle: "661 hp, 3.9 l"),
+      CarSpecsModel(title: "Engine", subTitle: "661 hp, 3.9 L"),
       CarSpecsModel(title: "0-100 km/h", subTitle: "3.0 s"),
       CarSpecsModel(title: "Drive", subTitle: "Rear-wheel"),
     ],

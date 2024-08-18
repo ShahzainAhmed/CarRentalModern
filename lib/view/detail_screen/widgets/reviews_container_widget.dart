@@ -15,12 +15,12 @@ class ReviewsContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 12.w),
       width: Get.width,
-      height: 80.h,
+      height: 56.h,
       decoration: BoxDecoration(
         color: AppColors.kGreyColor,
-        borderRadius: BorderRadius.circular(16.r),
+        borderRadius: BorderRadius.circular(12.r),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -29,6 +29,7 @@ class ReviewsContainerWidget extends StatelessWidget {
             horizontalTitleGap: 10,
             contentPadding: EdgeInsets.zero,
             leading: const CircleAvatar(
+              radius: 24,
               backgroundColor: AppColors.kBlackColor,
               backgroundImage: AssetImage(AppAssets.logo),
             ),
@@ -41,34 +42,28 @@ class ReviewsContainerWidget extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 22,
-                    ),
-                    SizedBox(width: 2.w),
-                    Text(
-                      rating,
-                      style: AppTypography.kBold.copyWith(fontSize: 12.sp),
-                    ),
+                    const Icon(Icons.star, color: Colors.amber, size: 22),
                     SizedBox(width: 4.w),
+                    Text(rating, style: AppTypography.kBold12),
+                    SizedBox(width: 6.w),
                     CircleAvatar(
-                      backgroundColor: AppColors.kBlackColor,
-                      radius: 2.r,
-                    ),
-                    SizedBox(width: 4.w),
+                        backgroundColor: AppColors.kBlackColor, radius: 2.r),
+                    SizedBox(width: 6.w),
                     Text(
                       reviews,
-                      style: AppTypography.kRegular.copyWith(fontSize: 12.sp),
+                      style: AppTypography.kLight12,
                     ),
                   ],
                 )
               ],
             ),
-            trailing: const Column(
+            trailing: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text("Rental rules"),
+                Text(
+                  "Rental rules",
+                  style: AppTypography.kBold10,
+                ),
               ],
             ),
           ),

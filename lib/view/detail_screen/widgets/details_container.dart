@@ -38,14 +38,14 @@ class DetailsContainer extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 4.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: FadeInUp(
                 duration: const Duration(milliseconds: 1100),
                 child: Text(
                   "Car rating: ${largeTilesModel.fullRating}/100",
-                  style: AppTypography.kRegular
-                      .copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500),
+                  style: AppTypography.kMedium12,
                 ),
               ),
             ),
@@ -60,22 +60,22 @@ class DetailsContainer extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20.h),
+            SizedBox(height: 30.h),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: FadeInUp(
                 duration: const Duration(milliseconds: 1300),
                 child: Text(
                   "Technical Specifications",
-                  style: AppTypography.kMedium14,
+                  style: AppTypography.kBold14,
                 ),
               ),
             ),
-            SizedBox(height: 16.h),
+            SizedBox(height: 20.h),
             SizedBox(
-              height: 90.h,
+              height: 70.h,
               child: ListView.separated(
-                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 separatorBuilder: (context, index) => SizedBox(width: 10.w),
                 scrollDirection: Axis.horizontal,
                 physics: const BouncingScrollPhysics(),
@@ -90,7 +90,7 @@ class DetailsContainer extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(height: 40.h),
+            SizedBox(height: 50.h),
             Divider(
               color: AppColors.kBlackColor.withOpacity(0.1),
               height: 0.1,

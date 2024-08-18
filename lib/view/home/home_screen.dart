@@ -36,10 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
               duration: const Duration(milliseconds: 1000),
               child: Container(
                 width: Get.width,
-                height: Get.height * 0.84,
+                height: Get.height * 0.855,
                 decoration: BoxDecoration(
-                  borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(20.r)),
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(20.r),
+                  ),
                   color: AppColors.kWhiteColor,
                 ),
                 child: SingleChildScrollView(
@@ -112,17 +113,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Text(
                                 "165 available",
-                                style: AppTypography.kRegular.copyWith(
-                                  color: AppColors.kBlackColor,
-                                  fontSize: 12.sp,
-                                ),
+                                style: AppTypography.kBold12,
                               ),
                               Text(
                                 "Popular",
-                                style: AppTypography.kBlack.copyWith(
-                                  color: AppColors.kBlackColor,
-                                  fontSize: 12.sp,
-                                ),
+                                style: AppTypography.kBold12,
                               ),
                             ],
                           ),
@@ -131,7 +126,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ListView.separated(
                         physics: const ClampingScrollPhysics(),
                         padding: EdgeInsets.symmetric(
-                            horizontal: 20.w, vertical: 20.h),
+                          horizontal: 20.w,
+                          vertical: 20.h,
+                        ),
                         separatorBuilder: (context, index) =>
                             SizedBox(height: 10.h),
                         shrinkWrap: true,

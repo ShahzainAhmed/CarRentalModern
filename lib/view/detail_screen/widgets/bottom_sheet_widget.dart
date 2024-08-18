@@ -23,6 +23,7 @@ class BottomSheetWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                
                 Text("from", style: AppTypography.kLight10),
                 RichText(
                   text: TextSpan(

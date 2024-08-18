@@ -1,8 +1,9 @@
 # Car Rental Modern UI
 
-### LinkedIn Post:
+### LinkedIn Post
 https://www.linkedin.com/feed/update/urn:li:ugcPost:7230942330394972161/
 
+### UI Design
 https://dribbble.com/shots/22423823-Car-Rental-Mobile-App-Design-Concept
 
 <p align="center" width="50%">

@@ -34,7 +34,7 @@ class DetailsContainer extends StatelessWidget {
                 duration: const Duration(milliseconds: 1000),
                 child: Text(
                   largeTilesModel.title,
-                  style: AppTypography.kMedium20,
+                  style: AppTypography.kBold.copyWith(fontSize: 20.sp),
                 ),
               ),
             ),
@@ -44,7 +44,8 @@ class DetailsContainer extends StatelessWidget {
                 duration: const Duration(milliseconds: 1100),
                 child: Text(
                   "Car rating: ${largeTilesModel.fullRating}/100",
-                  style: AppTypography.kLight12,
+                  style: AppTypography.kRegular
+                      .copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500),
                 ),
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:car_rental_modern/models/small_tiles_model.dart';
 import 'package:car_rental_modern/resources/app_colors.dart';
+import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,13 +29,14 @@ class SmallTiles extends StatelessWidget {
               borderRadius: BorderRadius.circular(15.r),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage(
-                  smallTilesModel.image,
-                ),
+                image: AssetImage(smallTilesModel.image),
               ),
             ),
           ),
-          Text(smallTilesModel.title),
+          Text(
+            smallTilesModel.title,
+            style: AppTypography.kBold.copyWith(fontSize: 14.sp),
+          ),
         ],
       ),
     );

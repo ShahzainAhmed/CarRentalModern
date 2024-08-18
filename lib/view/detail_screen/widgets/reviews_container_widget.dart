@@ -20,7 +20,6 @@ class ReviewsContainerWidget extends StatelessWidget {
       height: 80.h,
       decoration: BoxDecoration(
         color: AppColors.kGreyColor,
-        border: Border.all(color: AppColors.kBlackColor.withOpacity(0.09)),
         borderRadius: BorderRadius.circular(16.r),
       ),
       child: Column(
@@ -36,18 +35,21 @@ class ReviewsContainerWidget extends StatelessWidget {
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("DreamCars Agency"),
+                Text(
+                  "DreamCars Agency",
+                  style: AppTypography.kBold.copyWith(fontSize: 14.sp),
+                ),
                 Row(
                   children: [
                     const Icon(
                       Icons.star,
                       color: Colors.amber,
-                      size: 15,
+                      size: 22,
                     ),
                     SizedBox(width: 2.w),
                     Text(
                       rating,
-                      style: AppTypography.kLight12,
+                      style: AppTypography.kBold.copyWith(fontSize: 12.sp),
                     ),
                     SizedBox(width: 4.w),
                     CircleAvatar(
@@ -57,7 +59,7 @@ class ReviewsContainerWidget extends StatelessWidget {
                     SizedBox(width: 4.w),
                     Text(
                       reviews,
-                      style: AppTypography.kLight10,
+                      style: AppTypography.kRegular.copyWith(fontSize: 12.sp),
                     ),
                   ],
                 )

@@ -31,7 +31,7 @@ class TabBarWidget extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: GoogleFonts.poppins(
+            style: AppTypography.kExpandedRegular.copyWith(
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
               color: isSelected ? AppColors.kWhiteColor : AppColors.kBlackColor,

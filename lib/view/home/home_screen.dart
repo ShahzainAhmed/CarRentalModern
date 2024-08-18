@@ -3,6 +3,7 @@ import 'package:car_rental_modern/models/categories_model.dart';
 import 'package:car_rental_modern/models/large_tiles_model.dart';
 import 'package:car_rental_modern/models/small_tiles_model.dart';
 import 'package:car_rental_modern/resources/app_colors.dart';
+import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:car_rental_modern/view/detail_screen/detail_screen.dart';
 import 'package:car_rental_modern/view/home/widgets/large_tiles.dart';
 import 'package:car_rental_modern/view/home/widgets/location_container.dart';
@@ -34,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
             child: FadeInUp(
               duration: const Duration(milliseconds: 1000),
               child: Container(
-                padding: EdgeInsets.only(top: 20.h),
                 width: Get.width,
                 height: Get.height * 0.84,
                 decoration: BoxDecoration(
@@ -47,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(height: 20.h),
                       SizedBox(
                         height: 30.h,
                         child: ListView.separated(
@@ -106,11 +107,23 @@ class _HomeScreenState extends State<HomeScreen> {
                         duration: const Duration(milliseconds: 1700),
                         child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20.w),
-                          child: const Row(
+                          child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text("105 available"),
-                              Text("Popular"),
+                              Text(
+                                "165 available",
+                                style: AppTypography.kRegular.copyWith(
+                                  color: AppColors.kBlackColor,
+                                  fontSize: 12.sp,
+                                ),
+                              ),
+                              Text(
+                                "Popular",
+                                style: AppTypography.kBlack.copyWith(
+                                  color: AppColors.kBlackColor,
+                                  fontSize: 12.sp,
+                                ),
+                              ),
                             ],
                           ),
                         ),

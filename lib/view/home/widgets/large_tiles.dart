@@ -1,4 +1,5 @@
 import 'package:car_rental_modern/models/large_tiles_model.dart';
+import 'package:car_rental_modern/resources/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -40,13 +41,19 @@ class LargeTiles extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(largeTilesModel.title),
+                Text(
+                  largeTilesModel.title,
+                  style: AppTypography.kBold.copyWith(fontSize: 16.sp),
+                ),
                 const Spacer(),
                 const Icon(Icons.star, color: Colors.amber),
                 Text(largeTilesModel.rating),
               ],
             ),
-            Text("\$${largeTilesModel.price} / day"),
+            Text(
+              "\$${largeTilesModel.price} / day",
+              style: AppTypography.kBlack.copyWith(fontSize: 12.sp),
+            ),
           ],
         ),
       ),

@@ -42,11 +42,11 @@ dependencies:
   get: ^4.6.6
   flutter_screenutil: ^5.9.3
   google_fonts: ^6.2.1
-  device_preview: ^1.2.0
   blurrycontainer: ^2.1.0
   animated_text_kit: ^4.2.2
   animate_do: ^3.3.4
   bounce: ^1.0.2
+  device_preview_minus: ^1.0.6
 
 dev_dependencies:
   flutter_test:
@@ -75,16 +75,134 @@ flutter:
   assets:
     - assets/images/
   
-  fonts:
-    - family: Schyler
-      fonts:
-        - asset: assets/fonts/Britanica Black Italic.ttf
-          style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
+fonts:
+  - family: Britanica
+    fonts:
+      - asset: assets/fonts/Britanica-BlackItalic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Black.ttf
+        weight: 900
+        style: normal
+      - asset: assets/fonts/Britanica-BoldItalic.ttf
+        weight: 700
+        style: italic
+      - asset: assets/fonts/Britanica-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Britanica Condensed Bold Italic.ttf
+        weight: 700
+        style: italic
+      - asset: assets/fonts/Britanica Condensed Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Britanica Condensed Extra Bold.ttf
+        weight: 800
+      - asset: assets/fonts/Britanica Condensed Light Italic.ttf
+        weight: 300
+        style: italic
+      - asset: assets/fonts/Britanica Condensed Light.ttf
+        weight: 300
+      - asset: assets/fonts/Britanica Condensed Regular Italic.ttf
+        weight: 400
+        style: italic
+      - asset: assets/fonts/Britanica Condensed Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Britanica Condensed Thin Italic.ttf
+        weight: 100
+        style: italic
+      - asset: assets/fonts/Britanica Condensed Thin.ttf
+        weight: 100
+      - asset: assets/fonts/Britanica Expanded Black Italic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Black.ttf
+        weight: 900
+      - asset: assets/fonts/Britanica Expanded Bold Italic.ttf
+        weight: 700
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Britanica Expanded Extra Bold Italic.ttf
+        weight: 800
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Extra Bold.ttf
+        weight: 800
+      - asset: assets/fonts/Britanica Expanded Heavy Italic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Heavy.ttf
+        weight: 900
+      - asset: assets/fonts/Britanica Expanded Light Italic.ttf
+        weight: 300
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Light.ttf
+        weight: 300
+      - asset: assets/fonts/Britanica Expanded Regular Italic.ttf
+        weight: 400
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Britanica Expanded Thin Italic.ttf
+        weight: 100
+        style: italic
+      - asset: assets/fonts/Britanica Expanded Thin.ttf
+        weight: 100
+      - asset: assets/fonts/Britanica Extra Bold Italic.ttf
+        weight: 800
+        style: italic
+      - asset: assets/fonts/Britanica Extra Bold.ttf
+        weight: 800
+      - asset: assets/fonts/Britanica Heavy Italic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Heavy.ttf
+        weight: 900
+      - asset: assets/fonts/Britanica Light Italic.ttf
+        weight: 300
+        style: italic
+      - asset: assets/fonts/Britanica Light.ttf
+        weight: 300
+      - asset: assets/fonts/Britanica Regular Italic.ttf
+        weight: 400
+        style: italic
+      - asset: assets/fonts/Britanica Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Britanica Semi Expanded Black Italic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Black.ttf
+        weight: 900
+      - asset: assets/fonts/Britanica Semi Expanded Bold Italic.ttf
+        weight: 700
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Britanica Semi Expanded Extra Bold Italic.ttf
+        weight: 800
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Extra Bold.ttf
+        weight: 800
+      - asset: assets/fonts/Britanica Semi Expanded Heavy Italic.ttf
+        weight: 900
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Heavy.ttf
+        weight: 900
+      - asset: assets/fonts/Britanica Semi Expanded Light Italic.ttf
+        weight: 300
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Light.ttf
+        weight: 300
+      - asset: assets/fonts/Britanica Semi Expanded Regular Italic.ttf
+        weight: 400
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Britanica Semi Expanded Thin Italic.ttf
+        weight: 100
+        style: italic
+      - asset: assets/fonts/Britanica Semi Expanded Thin.ttf
+        weight: 100
+      - asset: assets/fonts/Britanica Thin Italic.ttf
+        weight: 100
+        style: italic
+      - asset: assets/fonts/Britanica Thin.ttf
+        weight: 100
